@@ -10,12 +10,12 @@ Monee Mate (https://moneemate.com) is a personal-finance app. This plugin connec
 ## Golden rules
 
 1. **Read before you write.** Start with `get-profile` (timezone = what "today" means, primary/international currency). Discover ids with `list-accounts`, `list-categories`, `list-credit-cards`, `list-people`, `list-groups`. Never guess ids.
-2. **Never duplicate records.** Before any `create-*`, check whether it already exists (e.g. `list-transactions` with `search`, a tight date range and the account; `list-credit-card-transactions` for the invoice). If something similar exists, ask the user instead of creating a second one. Never retry a create blindly after an error/timeout — list first to see if it went through.
+2. **Never duplicate records.** Before any `create-*`, check whether it already exists (e.g. `list-transactions` with `search`, a tight date range and the account; `list-credit-card-transactions` for the invoice). If something similar exists, ask the user instead of creating a second one. Never retry a create blindly after an error/timeout; list first to see if it went through.
 3. **Confirm before creating, editing or deleting.** Summarize what you will do (type, amount, currency, account/card, category, date, description) and wait for a "yes". For batches, show the full list once and get one confirmation.
 4. **Deletes are permanent.** All `delete-*` tools require `confirm: true`; only set it after explicit user confirmation. Prefer `archive-*` (accounts, categories, cards) and `end-recurring-transaction` / `delete-recurring-transaction` scope `pending` when the user just wants something "out of the way" or "cancelled".
 5. **Monee Mate does not move real money.** `pay-invoice`, `complete-transaction`, `create-group-settlement`, `create-people-transaction` only *record* things. Never claim you paid a bank, card or person; never ask for bank credentials.
 6. **People & invitations.** `create-person` with an email and `update-person-email` email a real person. Only use an email the user gave you and confirm first.
-7. **Sensitive settings.** `update-currency-settings` does not reconvert past amounts and `update-timezone` shifts every date — always confirm.
+7. **Sensitive settings.** `update-currency-settings` does not reconvert past amounts and `update-timezone` shifts every date, so always confirm.
 8. **Language.** Answer in the user's language. Format amounts with the user's currency (e.g. `$1,250.00` for USD).
 
 ## Useful recipes
