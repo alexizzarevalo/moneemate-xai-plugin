@@ -1,0 +1,12 @@
+{
+  "name": "monee-mate",
+  "displayName": "Monee Mate",
+  "version": "1.0.0",
+  "description": "Connect Cursor to your Monee Mate personal-finance account (moneemate.com) over OAuth: check balances, record expenses and income, manage budgets, credit cards, loans and shared group expenses by chatting with the agent. Free with any Monee Mate account, including the free plan.",
+  "author": { "name": "Darwin Arevalo", "email": "support@moneemate.com" },
+  "homepage": "https://moneemate.com",
+  "repository": "https://github.com/alexizzarevalo/moneemate-xai-plugin",
+  "license": "MIT",
+  "keywords": ["finance", "personal-finance", "budget", "expenses", "mcp"],
+  "logo": "assets/logo.svg"
+}

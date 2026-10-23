@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "monee-mate": {
+      "type": "http",
+      "url": "https://moneemate.com/mcp/moneemate"
+    }
+  }
+}

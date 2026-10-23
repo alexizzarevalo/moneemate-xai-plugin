@@ -1,0 +1,11 @@
+---
+description: Safety guardrails for any Monee Mate MCP tool call (financial records)
+alwaysApply: false
+---
+
+When using the tools from the Monee Mate MCP server:
+
+- Never call a `delete-*` tool, `update-currency-settings`, `update-person-email` or `create-person` with an email without explicit user confirmation in this conversation.
+- Before any `create-*` tool, search for an existing matching record (e.g. `list-transactions` with `search` and the same date range) to avoid duplicates.
+- Monee Mate only records money; it never pays banks or sends money. Do not tell the user a payment was made in the real world.
+- Reply in the user's language.
